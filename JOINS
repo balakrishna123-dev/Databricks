@@ -1,0 +1,16 @@
+Joins in databricks:
+===================
+
+first of all they are two ways to write the joins in databricks 
+1:using sql
+2:using pyspark
+
+ in this session we mainly focus on pyspark
+
+Key takeways:
+join in spark combines two dataframes  based on common columnin datasets
+
+
+
+
+
