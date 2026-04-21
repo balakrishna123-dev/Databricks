@@ -1,0 +1,13 @@
+narrow Transformation:
+
+narrow tranformation opertes on single partition and do not require data shuffle(map.filter,select)
+
+
+wide transformation:
+this wide transformation  requires shuffling  across the partition and nodes
+(groupby ,join,repartition)
+
+ narrow transformation are faster  and more efficient  beacuse they avoid expensive network input/output
+
+wide transformation  trigger shuffle operation  which involves disk and network making them coster in term  of performance
+ understanding the difference optimizing the jobs by minizing the widw transformation where possible
