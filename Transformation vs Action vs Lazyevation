@@ -1,0 +1,25 @@
+ Transformation and action and lazy evalution:
+
+what is transformation:
+ we apply the transformation on  rdd or dataframes which will gives a new dataset 
+example of transformation:
+
+select ,filter,map,flatmap
+
+actions:
+
+actions  trigger are actually executed on pre defined transformation and give the result
+
+example of actions:
+count,show,collect()
+
+lazy evalution:
+spark uses the lazy evalution concept  it means transformation are not executed until action is called
+ this lazy evalution build the spark an optimized dag(directed acylic graph) helps to avoid unneccasy computuion
+
+benefits of lazy evalution:
+
+query optimization
+avoid unnecessary computuaion
+fault tolerance
+memory effiecient
