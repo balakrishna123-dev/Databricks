@@ -1,1 +1,14 @@
 
+what is partition:
+
+break down of the large dataset in small chuncks is called partition  
+ in spark data is distributed parallely across the cluster 
+
+
+repartition:
+
+it is used to increase or decreas the parttion when we do this data is shuffling it is expensive
+
+coalsce:
+it is only used when you want to decrease the parttion 
+it will never  incerase the partition there is very less data movement happening in the coalsce
