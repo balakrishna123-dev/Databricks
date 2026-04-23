@@ -1,1 +1,22 @@
 
+Broadcastjoin:
+
+broadcast joins send the smaller dataset to the worker nodes avoid shuffling and speed up joins whan one side is small dataset
+
+shuffle hash join:
+it will redistribute the both dataset across the cluster using hash hint on the join key and it is suitable for large to large
+
+broadcast joins are more efficient it will work only  smaller dataset fits into the memeory ortherwise it will throw a error
+ you can guide spark join statregy using joinshints  such as .hint(Broadcast) or.hint(shufflehash) to over ride default planner
+choosing the right join startegy is  curical for scalability as improper join can leads to memory issues,skews and expensive shuffles
+
+three join statergies
+1:broad cast2:hashshuffle  3:sort merge
+
+when to use
+if (small_table_size<broadcast_join)(10mb):
+usebroadcast
+elif(both tables are large-)
+use hash shuffle
+else:
+use sort merge join
